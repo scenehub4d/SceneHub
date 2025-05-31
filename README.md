@@ -17,8 +17,11 @@ This partial set is sufficient for prototyping and evaluating pipeline compatibi
 ---
 
 ## Datset structure
-📌 **Note**: The directory structure here differs slightly from the original layout presented in the paper.  
-To enhance accessibility and structural clarit, we have rearranged the dataset contents.
+📌 **Note**: 
+Scene labels differ slightly from the paper for clarity.(`lab area → arena`, `factory → mill19`).  
+The directory structure here differs slightly from the original layout presented in the paper, for structural simplicity:
+
+
 ```bash
 MM_release/
 ├── camera_pose/                # camera pose metadata
@@ -31,7 +34,7 @@ MM_release/
 ### RGBD data
 ```bash
 dataset-paper/rgbd_data/
-└── <scene>/                      # scene name
+└── <scene>/                      # scene ∈ {arena, couch, kitchen, mill19, whiteboard}
     └── <scene>_scene<id>_100/    # id ∈ {0,1,2,…}
         └── rgbd/
             └── cam<cam_id>/      # cam_id ∈ {0,1,2,3}
@@ -42,27 +45,26 @@ dataset-paper/rgbd_data/
 ### Camera Pose
 ```bash
 camera_pose/
-├── cam_views/                    # per-scene view files
-│       └── <scene>/                # scene ∈ {arena, couch, kitchen, mill19, whiteboard}
-│               ├── <scene>_interpolated.npy
-│               ├── <scene>_original.npy
-│               ├── <scene>_random_extrinsics_seed42_sample50.npy
-│               └── <scene>_shifted.npy
-│       └── couch/                 # view definitions (JSON)
-├── extrinsics/                   # camera extrinsic matrices
-│       └── extrinsics_<scene>.npy                     # 4×4 matrices in plain text                
-└── intrinsics/                   # camera intrinsic parameters
-    └── <scene>_config.json                     # focal lengths, principal points, etc.
+├── cam_views/                    # per-scene view files ∈ {original, shifted, interpolated, random}
+│       └── <scene>/              # scene ∈ {arena, couch, kitchen, mill19, whiteboard}
+│               ├── <scene>_original.npy
+│               ├── <scene>_shifted.npy
+│               ├── <scene>_interpolated.npy
+│               └── <scene>_random_extrinsics_seed42_sample50.npy
+├── extrinsics/                   # camera extrinsic matrices (world to camera)
+│       └── extrinsics_<scene>.npy                     
+└── intrinsics/                   # camera factory intrinsics, optimal intrinsics parameters
+    └── <scene>_config.json                     
 ```
 
 ### Geometry Output
 ```bash
 geometry/
-└── <scene>/                      # scene name
+└── <scene>/                          # scene ∈ {arena, couch, kitchen, mill19, 
         └── <scene>_scene<id>_100/    # id ∈ {0,1,2,…}
             ├── 3dgs/                 # Gaussian splatting outputs
             │   └── point_cloud/
-            │       └── iteration_30000/point_cloud_<frame_idx>.ply  # point cloud file
+            │       └── iteration_30000/point_cloud_<frame_idx>.ply 
             ├── mesh/                 # textured meshes
             │   ├── <frame_idx>.obj
             │   ├── <frame_idx>.mtl
@@ -75,7 +77,7 @@ geometry/
 ```bash
 photogrammetry/
 └── <scene>/                      # scene-specific photogrammetry
-    ├── <scene>.obj                     # mesh file
-    ├── <scene>.mtl                     # mesh file
-    └── <scene>.png                     # mesh file
+    ├── <scene>.obj               # mesh file
+    ├── <scene>.mtl               # mesh file
+    └── <scene>.png               # mesh file
 ```
