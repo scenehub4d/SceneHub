@@ -4,7 +4,7 @@
 
 A partial version of the SceneHub dataset is available for public download:
 
-**📦 Download link**: [SceneHubData]([https://bit.ly/SceneHubData](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0))
+**📦 Download link**: [SceneHubData](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0)
 
 To ensure ease of access, we provide:
 - **100 RGB-D frames** per scene (instead of the full 1000+)
