@@ -4,7 +4,7 @@ project(mesh-texturing LANGUAGES CXX)
 # ————————————————————————————————
 # Point CMake at your Open3D install
 # ————————————————————————————————
-set(OPEN3D_ROOT /home/XX/built_packages/open3d_install_0.19.0)
+set(OPEN3D_ROOT /home/jaehong/built_packages/open3d_install_0.19.0)
 list(APPEND CMAKE_PREFIX_PATH ${OPEN3D_ROOT})
 
 # ————————————————————————————————
