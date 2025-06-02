@@ -1,0 +1,6 @@
+# add_subdirectory(sensor)
+# add_subdirectory(filtering)
+# add_subdirectory(edge_detect)
+# add_subdirectory(ina_streaming)
+add_subdirectory(reconstruction)
+# add_subdirectory(streaming)
