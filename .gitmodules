@@ -1,0 +1,3 @@
+[submodule "gaussian_splatting_rgbd"]
+	path = gaussian_splatting_rgbd
+	url = https://github.com/scenehub4d/gaussian_splatting_rgbd.git
