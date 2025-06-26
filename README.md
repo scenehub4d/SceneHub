@@ -1,9 +1,10 @@
-# SceneHub
-A dataset and evaluation framework for 6-DoF 4D scenes.
+<div align="center">
 
-<div align="left">
+SceneHub  
+===========================  
+<h4>A Dataset and Evaluation Framework for 6-DoF 4D Scenes</h4>
 
-🌐 [Project Page](https://scenehub4d.github.io/)  📂 [Download Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0)  🧠 [Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)  📄 Paper: *Coming soon*  🎮 Unity App: *Coming soon*
+### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/...) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
 
 </div>
 
