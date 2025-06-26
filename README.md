@@ -1,12 +1,11 @@
 # SceneHub
 A dataset and evaluation framework for 6-DoF 4D scenes.
 
+<div align="left">
 
-| [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Download Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0) | [🧠 Dataset Viewer (ARENA)](#scene-viewers) | 📄 Paper: *Coming soon* | 🎮 Unity Streaming App: *Coming soon* |
-|---|---|---|---|---|
+🌐 [Project Page](https://scenehub4d.github.io/)  📂 [Download Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0)  🧠 [Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)  📄 Paper: *Coming soon*  🎮 Unity App: *Coming soon*
 
-
-## Contents
+</div>
 
 ## Contents
 
@@ -27,7 +26,7 @@ A dataset and evaluation framework for 6-DoF 4D scenes.
   - [3.4 Multi-view Rendering using Camera Pose Variants](#34-multi-view-rendering-using-camera-pose-variants)  
   - [3.5 Visualize and Generate Camera Poses](#35-visualize-and-generate-camera-poses)  
   - [3.6 Visualize Dynamic Point Clouds](#36-visualize-dynamic-point-clouds)
-  
+
 ## Dataset Access
 
 A partial version of the SceneHub dataset is available for public download:
