@@ -3,7 +3,7 @@
 # SceneHub  
 **A Dataset and Evaluation Framework for 6-DoF 4D Scenes**
 
-<img src="assets/teaser_figure.png" width="100%"/>
+<img src="assets/teaser_figure.png" style="max-width: 1000px; width: 100%;"/>
 
 ### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/...) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
 
