@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # Name of the Conda environment
 ENV_NAME=3d
 

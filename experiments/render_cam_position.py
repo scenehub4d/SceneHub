@@ -253,13 +253,11 @@ if __name__ == "__main__":
             np.array(shifted_cameras))
 
 
-    # # 각 그룹마다 색 다르게 하고 싶다면 색 지정
     # spheres_original = spheres_from_extrinsics(original_cameras, radius=0.06, color=[1.0, 0.0, 0.0])
     # spheres_random = spheres_from_extrinsics(random_cameras, radius=0.05, color=[0.0, 1.0, 0.0])
     # spheres_interp = spheres_from_extrinsics(interpolated_cameras, radius=0.05, color=[0.0, 0.0, 1.0])
     # spheres_shifted = spheres_from_extrinsics(shifted_cameras, radius=0.04, color=[0.0, 0.0, 0.0])
 
-    # # 전체 리스트로 합치기
     # spheres = spheres_original + spheres_random + spheres_interp + spheres_shifted    
 
     # collect all and draw
