@@ -1,10 +1,11 @@
 <div align="center">
 
-SceneHub  
-===========================  
-<h4>A Dataset and Evaluation Framework for 6-DoF 4D Scenes</h4>
+# SceneHub  
+**A Dataset and Evaluation Framework for 6-DoF 4D Scenes**
 
-### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/...) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
+<img src="assets/teaser_figure.png" width="100%"/>
+
+### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/...) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
 
 </div>
 
