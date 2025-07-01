@@ -31,7 +31,64 @@
 
 ## Dataset Access
 
-A partial version of the SceneHub dataset is available for public download:
+We provide two access options for accessing the SceneHub dataset:  
+- **Full dataset access via the Open Storage Network (OSN)**  
+- **Lightweight partial dataset via Dropbox**
+
+---
+
+### Option 1. Full Dataset via OSN
+
+The **full SceneHub dataset** is hosted on the [Open Storage Network (OSN)](https://openstoragenetwork.github.io/), an NSF-funded distributed data sharing and transfer service based on S3 buckets and integrated with [Internet2](https://internet2.edu/). Institutions connected to Internet2 can benefit from high-speed transfers. In our tests from the CMU campus, we observed speeds of up to ~1.5 Gbps for upload and ~600 Mbps for download.
+
+The recommended way to access OSN-hosted data is via [rclone](https://rclone.org/docs/), a command-line program for managing files on cloud storage.
+
+**Step 1: Install rclone**
+
+```bash
+sudo apt-get install rclone
+```
+
+**Step 2: Configure rclone for OSN**
+
+Find your config file path:
+```bash
+rclone config file
+```
+
+Then, edit your config file (e.g., `~/.config/rclone/rclone.conf`) and add:
+
+<pre><code>```ini
+[osn-ro] 
+type = s3
+provider = Ceph
+access_key_id = ES6ZEUBO5IBFN16J49UE
+secret_access_key = AERDvr4sdSBBY2OtJkiiLqM4AIsJyZuqeBOpQaV1
+endpoint = https://uri.osn.mghpcc.org
+no_check_bucket = true
+```
+</code></pre>
+
+**Step 3: Download the dataset**
+
+To download the entire dataset (≈ 958.4 GiB):
+```bash
+rclone sync osn-ro:/cmu-wiselab-scenehub ./scenehub -v
+```
+You can also download specific scenes or subsets:
+```bash
+rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data/arena/arena_scene0 ./scenehub/rgbd_data/arena/arena_scene0 -v
+```
+
+You can interrupt the download anytime (e.g., `Ctrl+C`) and resume later.
+
+**Breakdown:**
+- `rgbd_data` (full RGB-D frames): 891.154 GiB
+- `rgbd_data_100` (100 frames per scene, also available via Dropbox): 26.671 GiB  
+
+### Option 2. Partial Dataset via Dropbox
+
+For lightweight testing, a partial version (100 frames per scene) is available:
 
 **📦 Download link**: [SceneHubData](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0)
 
@@ -40,9 +97,6 @@ To ensure ease of access, we provide:
 - **Example geometry outputs** (1 frame per scene) including Gaussian Splatting, mesh, and point cloud
 
 This partial set is sufficient for prototyping and evaluating pipeline compatibility.
-
-⚠️ The **full dataset**, including all RGB-D frames, will be made available soon once long-term hosting is arranged. Stay tuned!
-
 
 ## Dataset Structure
 
