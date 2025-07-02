@@ -67,31 +67,32 @@ secret_access_key = AERDvr4sdSBBY2OtJkiiLqM4AIsJyZuqeBOpQaV1
 endpoint = https://uri.osn.mghpcc.org
 no_check_bucket = true
 ```
+**Step 3: Test your access**
 
-**Step 3: Download the dataset**
-
-To download the entire dataset (≈ 958.4 GiB):
-```bash
-rclone sync osn-ro:/cmu-wiselab-scenehub ./scenehub -v
-```
-To view a list files and directories in the dataset, run:
+To confirm that your access is working and view the top-level files and directories in the dataset, run:
 ```bash
 rclone lsf osn-ro:/cmu-wiselab-scenehub
 ```
 For more details on the dataset layout, refer to the [Dataset Structure](#dataset-structure).
 
-You can also download dataset for specific scenes or subsets:
+**Step 4: Download the dataset**
+
+To download the entire dataset (≈ 958.4 GiB):
 ```bash
-rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data/arena/arena_scene0 ./scenehub/rgbd_data/arena/arena_scene0 -v
+rclone sync osn-ro:/cmu-wiselab-scenehub ./scenehub -P
 ```
-Downloading a partial rgbd_data set version (100 frames per scene):
+You can also download specific scenes or subsets of the dataset:
 ```bash
-rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data_100 ./scenehub/rgbd_data_100 -v
+rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data/arena/arena_scene0 ./scenehub/rgbd_data/arena/arena_scene0 -P
+```
+To download a lightweight version of the RGB-D data (100 frames per scene), run:
+```bash
+rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data_100 ./scenehub/rgbd_data_100 -P
 ```
 
 You can interrupt the download anytime (e.g., `Ctrl+C`) and resume later.
 
-**Breakdown of the available rgbd_data access (Refer to the [Dataset Structure](#dataset-structure)):** 
+**Breakdown of the available RGB-D data directories (see the [Dataset Structure](#dataset-structure)):** 
 - `rgbd_data` (full RGB-D frames): 891.154 GiB
 - `rgbd_data_100` (100 frames per scene, also available via Dropbox): 26.671 GiB  
 
@@ -228,7 +229,8 @@ bash reconstruct.sh
 
 #### 2.2.1. Training a Gaussian Splat 
 
-This pipeline builds on the official [3D Gaussian Splatting codebase](https://github.com/graphdeco-inria/gaussian-splatting), but instead of relying on SfM-based sparse point clouds from RGB images, we use point clouds derived from depth images.
+This pipeline builds on the official [3D Gaussian Splatting codebase](https://github.com/graphdeco-inria/gaussian-splatting). 
+Unlike the original, which relies on SfM-based sparse point clouds from RGB images, we instead use point clouds derived from depth images.
 
 ---
 Use `gaussian_splatting_rgbd/train.py` to train a scene-specific Gaussian Splat representation.
@@ -243,8 +245,8 @@ python train.py \
     --test_iterations 1000 \                   # Run evaluation every 1000 iterations
     --intrinsic_path ${INTRINSIC_PATH} \       # Path to intrinsics JSON file
     --extrinsic_path ${EXTRINSIC_PATH} \       # Path to extrinsics NPY file
-    --ptcl_downsample 0 \                      # Voxel size for point cloud downsampling (0 = no downsampling)
-                                               # Increase to >0 (e.g., 0.01–0.05) for sparser point clouds
+    --ptcl_downsample 0 \                      # Voxel size for point cloud downsampling. 
+                                               # Set to 0 to disable downsampling. Increase to a value > 0 (e.g., 0.01–0.05) for sparser point clouds.
     --frame_idx ${FRAME_IDX}                   # Temporal frame index to train on (e.g., 0 = first frame)
 ```
 Or simply use the following script (edit hardcoded paths inside the script as needed):
