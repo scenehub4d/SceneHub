@@ -74,6 +74,12 @@ To download the entire dataset (≈ 958.4 GiB):
 ```bash
 rclone sync osn-ro:/cmu-wiselab-scenehub ./scenehub -v
 ```
+To view a list files and directories in the dataset, run:
+```bash
+rclone lsf osn-ro:/cmu-wiselab-scenehub
+```
+For more details on the dataset layout, refer to the [Dataset Structure](#dataset-structure).
+
 You can also download dataset for specific scenes or subsets:
 ```bash
 rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data/arena/arena_scene0 ./scenehub/rgbd_data/arena/arena_scene0 -v
@@ -85,7 +91,7 @@ rclone sync osn-ro:/cmu-wiselab-scenehub/rgbd_data_100 ./scenehub/rgbd_data_100 
 
 You can interrupt the download anytime (e.g., `Ctrl+C`) and resume later.
 
-**Breakdown of available rgbd_data access (Refer to the [Dataset Structure](#dataset-structure)):** 
+**Breakdown of the available rgbd_data access (Refer to the [Dataset Structure](#dataset-structure)):** 
 - `rgbd_data` (full RGB-D frames): 891.154 GiB
 - `rgbd_data_100` (100 frames per scene, also available via Dropbox): 26.671 GiB  
 
@@ -113,7 +119,7 @@ The directory structure here differs slightly from the original layout presented
 
 
 ```bash
-scenehub/
+cmu-wiselab-scenehub/
 ├── camera_pose/                # camera pose metadata
 ├── geometry/                   # 3D reconstruction outputs
 ├── photogrammetry/             # high-res background meshes
