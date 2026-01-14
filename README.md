@@ -5,7 +5,7 @@
 
 <img src="assets/teaser_figure.png" style="max-width: 1000px; width: 100%;"/>
 
-### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
+### [📄 Paper](XX) | [🌐 Project Page](https://scenehub4d.github.io/) | [📂 Dataset](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=tjxf94swvpcrnkup5j3b3c8mt&st=b7kbx075&dl=0) | [🎮 Dataset Viewer](https://scenehub4d.github.io/#scene-viewers)
 
 </div>
 
