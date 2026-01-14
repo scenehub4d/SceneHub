@@ -102,7 +102,7 @@ To ensure ease of access and lightweight testing, we also provide a partial vers
 - **100 RGB-D frames** per scene (`rgbd_data_100`)
 - **Example geometry outputs** (1 frame per scene) including Gaussian Splatting, mesh, and point cloud
 
-**📦 Download link**: [SceneHubData](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=wj7engjmfmefwtl9nql5plf23&st=p0zilhf7&dl=0)
+**📦 Download link**: [SceneHubData](https://www.dropbox.com/scl/fo/gfskqntptl6vemn4d62jb/ACKZ8XfLVs8YA_EOushYDoM?rlkey=tjxf94swvpcrnkup5j3b3c8mt&st=b7kbx075&dl=0)
 
 This partial set is sufficient for prototyping and evaluating pipeline compatibility.
 
