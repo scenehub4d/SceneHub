@@ -1,6 +1,6 @@
 <div align="center">
 
-# SceneHub  
+# SceneHub4D  
 **A Dataset and Evaluation Framework for 6-DoF 4D Scenes**
 
 <img src="assets/teaser_figure.png" style="max-width: 1000px; width: 100%;"/>
